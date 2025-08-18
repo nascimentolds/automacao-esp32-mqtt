@@ -1,6 +1,6 @@
 # Revezamento Automático de Ar-Condicionado com ESP32 e Interface Web
 
-Este projeto, desenvolvido para a disciplina de **Sistemas Embarcados**, é um sistema de automação para gerenciar o revezamento entre dois aparelhos de ar-condicionado (um **LG** e um **Komeco**) usando um **ESP32**, com controle e monitoramento através de uma interface web em tempo real.
+Este projeto, desenvolvido para a disciplina de **Sistemas Embarcados do IFPE - Campus Garanhuns**, é um sistema de automação para gerenciar o revezamento entre dois aparelhos de ar-condicionado (um **LG** e um **Komeco**) usando um **ESP32**, com controle e monitoramento através de uma interface web em tempo real.
 
 ## Objetivo
 Garantir que apenas um aparelho funcione por vez, automatizando a troca para equilibrar o uso e evitar sobrecarga, ao mesmo tempo que oferece controle remoto ao usuário.
