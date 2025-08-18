@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Ar-Condicionado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Controle de Ar-Condicionado da Sala</h1>
+        <div id="connection-status" class="status-disconnected">
+            <span class="status-dot"></span>
+            <span class="status-text">Desconectado</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="global-controls">
+            <button id="swap-button" class="control-button">Alternar Aparelhos</button>
+            <button id="all-toggle-button" class="control-button">Desligar Tudo</button>
+        </div>
+
+        <div class="dashboard">
+            <div class="ac-card" id="ac1-card">
+                <h2>Ar 1 (LG)</h2>
+                <div class="ac-status" id="ac1-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Offline</span>
+                </div>
+                <div class="ac-details">
+                    <p>Temperatura: <span id="ac1-temp">--</span>°C</p>
+                    <p>Modo: <span id="ac1-mode">--</span></p>
+                    <p>Ligado há: <span id="ac1-uptime">--</span></p>
+                </div>
+            </div>
+
+            <div class="ac-card" id="ac2-card">
+                <h2>Ar 2 (Komeco)</h2>
+                <div class="ac-status" id="ac2-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Offline</span>
+                </div>
+                <div class="ac-details">
+                    <p>Temperatura: <span id="ac2-temp">--</span>°C</p>
+                    <p>Modo: <span id="ac2-mode">--</span></p>
+                    <p>Ligado há: <span id="ac2-uptime">--</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="active-controls" id="active-controls-section">
+            <h3>Controles do Aparelho Ativo</h3>
+            <div class="control-group">
+                <label>Temperatura</label>
+                <div class="temp-control">
+                    <button id="temp-down">-</button>
+                    <span id="active-temp">22°C</span>
+                    <button id="temp-up">+</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Modo de Operação</label>
+                <div class="mode-control">
+                    <button class="mode-button" data-mode="1">Frio</button>
+                    <button class="mode-button" data-mode="2">Calor</button>
+                    <button class="mode-button" data-mode="3">Ventilar</button>
+                    <button class="mode-button" data-mode="4">Desumidificar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
